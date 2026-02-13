@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -7,7 +7,7 @@ import { RouterLink } from "@angular/router";
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {
+export class Navbar implements OnInit {
   protected items = signal<NavbarItems[]>([
     {
       name: "about",
@@ -22,6 +22,14 @@ export class Navbar {
       path: ''
     },
   ]);
+
+  protected showNavbar = signal<boolean>(false);
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.showNavbar.set(true);
+    }, 2010);
+  }
 }
 
 export interface NavbarItems {

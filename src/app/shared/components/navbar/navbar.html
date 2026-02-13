@@ -1,11 +1,13 @@
-<div class="navbar-handler">
-  <div class="main">
-    <h1 class="name">@abuprogrammiy</h1>
-    <div class="items">
-      @for (item of items(); track $index) {
-        <a class="list-imte" [routerLink]="item.path">{{ item.name }}</a>
-      }
+@if (showNavbar()) {
+  <div class="navbar-handler">
+    <div class="main">
+      <h1 class="name">@abuprogrammiy</h1>
+      <div class="items">
+        @for (item of items(); track $index) {
+          <a class="list-imte" [routerLink]="item.path">{{ item.name }}</a>
+        }
+      </div>
+      <h1 class="name">portfolio</h1>
     </div>
-    <h1 class="name">portfolio</h1>
   </div>
-</div>
+}

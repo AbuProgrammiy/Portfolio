@@ -4,6 +4,7 @@
 
 .navbar-handler {
   padding: 10px;
+  animation: scale 0.5s ease;
 }
 
 .main {
@@ -24,8 +25,7 @@
 .name {
   margin: 0;
   font-size: 30px;
-  color: #c91634;
-
+  color: var(--scarlet-red);
 }
 
 .items {
@@ -35,6 +35,16 @@
 }
 
 .list-imte {
-  color: #c91634;
+  color: var(--scarlet-red);
   text-decoration: unset;
+}
+
+@keyframes scale {
+  0% {
+    scale: (0.9);
+  }
+
+  100% {
+    scale: (1);
+  }
 }
