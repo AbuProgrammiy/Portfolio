@@ -1,0 +1,40 @@
+* {
+  font-family: sans-serif;
+}
+
+.navbar-handler {
+  padding: 10px;
+}
+
+.main {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid rgba($color: gray, $alpha: 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba($color: var(--off-white), $alpha: 0.5);
+}
+
+.name {
+  margin: 0;
+  font-size: 30px;
+  color: #c91634;
+
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-imte {
+  color: #c91634;
+  text-decoration: unset;
+}
