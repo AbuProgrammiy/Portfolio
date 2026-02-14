@@ -8,4 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class UserCard {
   public userPictureUrl = input<string>();
+  public fade = input<boolean>();
 }

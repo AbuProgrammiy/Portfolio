@@ -1,4 +1,4 @@
-*{
+* {
   font-family: sans-serif;
 }
 
@@ -6,7 +6,7 @@
   width: 350px;
   min-height: 80vh;
   border-radius: 20px;
-  box-shadow: 0 0 12px black;
+  border: 3px solid rgba($color: gray, $alpha: 0.2);
 }
 
 .img-handler {
@@ -22,21 +22,34 @@
   height: auto;
   object-fit: cover;
   border-radius: 20px;
+  transition: opacity 0.3s ease;
 }
 
-.info-handler{
+.fade {
+  opacity: 0;
+}
+.info-handler {
   width: 100%;
   padding: 15px;
 }
 
-.name{
+.name {
   text-align: center;
   font-weight: 600;
   font-size: 30px;
 }
 
-.description{
+.description {
   font-size: 20px;
   text-align: center;
+  color: gray;
+}
+
+.hashtags {
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 700;
   color: gray;
 }
