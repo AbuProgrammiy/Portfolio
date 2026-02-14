@@ -1,5 +1,6 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { StateService } from '../../../core/services/state-service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,32 +8,24 @@ import { RouterLink } from "@angular/router";
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar implements OnInit {
+export class Navbar {
   protected items = signal<NavbarItems[]>([
     {
-      name: "about",
-      path: ''
+      name: 'about',
+      path: '',
     },
     {
-      name: "works",
-      path: ''
+      name: 'works',
+      path: '',
     },
     {
-      name: "projects",
-      path: ''
+      name: 'projects',
+      path: '',
     },
   ]);
-
-  protected showNavbar = signal<boolean>(false);
-
-  ngOnInit() {
-    setTimeout(() => {
-      this.showNavbar.set(true);
-    }, 2010);
-  }
 }
 
 export interface NavbarItems {
-  name: string,
+  name: string;
   path: string;
 }

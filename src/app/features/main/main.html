@@ -1,3 +1,6 @@
 @if (showAnimation()) {
-  <app-intro></app-intro>
+  <app-intro (stopAnimation)="showAnimation.set(false)"> </app-intro>
+} @else {
+  hello
+  
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Intro } from "./components/intro/intro";
 
 @Component({
@@ -7,13 +7,8 @@ import { Intro } from "./components/intro/intro";
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })
-export class Main implements OnInit {
+export class Main  {
   protected showAnimation = signal<boolean>(true);
 
-  ngOnInit() {
-    setTimeout(() => {
 
-      this.showAnimation.set(false);
-    }, 2010);
-  }
 }

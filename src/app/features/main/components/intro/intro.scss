@@ -4,11 +4,17 @@
 
 .main {
   width: 100%;
-  height: 91vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.start-text {
+  font-size: 50px;
+  color: var(--scarlet-red);
+  cursor: pointer;
 }
 
 .name {
@@ -18,7 +24,7 @@
 
 .fade-in {
   animation: fade-in forwards;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes fade-in {
@@ -31,23 +37,32 @@
   }
 }
 
-.scale-increase {
-  animation: scale-increase forwards;
+.scale-increase-and-fade-out {
+  animation: scale-increase-and-fade-out forwards;
   animation-duration: 1s;
 }
 
-@keyframes scale-increase {
+@keyframes scale-increase-and-fade-out {
+  50% {
+    opacity: 100%;
+  }
   100% {
+    opacity: 0;
     font-size: 2000px;
   }
 }
 
-.fade-out {
-  animation: fade-out forwards;
+.fade-out-1s {
+  animation: fade-out-1s forwards;
   animation-duration: 1s;
 }
 
-@keyframes fade-out {
+.fade-out-fast {
+  animation: fade-out-fast forwards;
+  animation-duration: 0.3s;
+}
+
+@keyframes fade-out-fast {
   0% {
     opacity: 100%;
   }
@@ -55,8 +70,4 @@
   100% {
     opacity: 0;
   }
-}
-
-.end {
-  opacity: 0;
 }

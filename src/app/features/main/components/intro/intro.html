@@ -1,6 +1,9 @@
 <div class="main">
-  <h1 [class]="nameClass() + ' name'">Abdukholiq</h1>
+  @if (!isUserInterackted()) {
+    <h1 [class]="startTextClass()+' start-text'" (click)="onUserClicked()">Start</h1>
+  } @else {
+    <h1 [class]="nameClass() + ' name'">Abdukholiq</h1>
+  }
 </div>
 
-<audio controls src="assets/out.mp3"></audio>
-<audio controls src="/assets/out.mp3"></audio>
+<audio #player src="./assets/out.mp3"></audio>
