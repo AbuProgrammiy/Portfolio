@@ -1,6 +1,6 @@
-@if (showAnimation()) {
-  <app-intro (stopAnimation)="showAnimation.set(false)"> </app-intro>
-} @else {
+<app-intro (stopAnimation)="showAnimation.set(false)"> </app-intro>
+
+@if (!showAnimation()) {
   <div class="main">
     <div class="user-card">
       <app-user-card [userPictureUrl]="userPictureUrl()" [fade]="fade()"></app-user-card>

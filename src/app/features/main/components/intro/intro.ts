@@ -16,6 +16,7 @@ export class Intro {
   protected nameClass = signal<string | null>(null);
   protected startTextClass = signal<string | null>(null);
   protected isUserInterackted = signal<boolean>(false);
+  protected show = signal<boolean>(true);
 
   protected onUserClicked() {
     this.startTextClass.set('fade-out-fast');
@@ -30,6 +31,7 @@ export class Intro {
 
         setTimeout(() => {
           this.stopAnimation.emit();
+          this.show.set(false)
           this.stateService.setShowNavbar(true);
         }, 1000);
       }, 1000);
