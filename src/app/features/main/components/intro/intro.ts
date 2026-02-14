@@ -29,8 +29,8 @@ export class Intro {
         this.nameClass.set('scale-increase-and-fade-out');
 
         setTimeout(() => {
+          this.stopAnimation.emit();
           this.stateService.setShowNavbar(true);
-          
         }, 1000);
       }, 1000);
     }, 300);
