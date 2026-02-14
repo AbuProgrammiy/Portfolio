@@ -1,6 +1,9 @@
 @if (showAnimation()) {
   <app-intro (stopAnimation)="showAnimation.set(false)"> </app-intro>
 } @else {
-  hello
-  
+  <div class="main">
+    <div class="user-card">
+      <app-user-card [userPictureUrl]="userPictureUrl()"></app-user-card>
+    </div>
+  </div>
 }

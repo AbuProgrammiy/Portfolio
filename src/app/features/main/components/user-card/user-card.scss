@@ -1,0 +1,42 @@
+*{
+  font-family: sans-serif;
+}
+
+.main {
+  width: 350px;
+  min-height: 80vh;
+  border-radius: 20px;
+  box-shadow: 0 0 12px black;
+}
+
+.img-handler {
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.info-handler{
+  width: 100%;
+  padding: 15px;
+}
+
+.name{
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.description{
+  font-size: 20px;
+  text-align: center;
+  color: gray;
+}

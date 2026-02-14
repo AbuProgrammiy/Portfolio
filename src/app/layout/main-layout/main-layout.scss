@@ -1,3 +1,10 @@
 * {
   margin: 0;
 }
+
+.navbar-handler{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

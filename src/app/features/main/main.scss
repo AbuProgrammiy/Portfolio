@@ -1,0 +1,14 @@
+.main{
+  width: 100%;
+  display: flex;
+}
+
+.user-card{
+  width: 33%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
