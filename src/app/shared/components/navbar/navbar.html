@@ -1,6 +1,6 @@
 <div class="navbar-handler">
   <div class="main">
-    <h1 class="name">@abuprogrammiy</h1>
+    <h1 class="name" (click)="menu.toggle($event)">@abuprogrammiy</h1>
     <div class="items">
       @for (item of items(); track $index) {
         <a class="list-imte" [routerLink]="item.path">{{ item.name }}</a>
@@ -9,3 +9,5 @@
     <h1 class="name">portfolio</h1>
   </div>
 </div>
+
+<p-menu #menu [model]="menuItems" [popup]="true" />
