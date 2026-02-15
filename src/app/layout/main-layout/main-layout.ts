@@ -2,10 +2,11 @@ import { Component, computed, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from '../../shared/components/navbar/navbar';
 import { StateService } from '../../core/services/state-service';
+import { Toast } from 'primeng/toast';
 
 @Component({
   selector: 'app-main-layout',
-  imports: [RouterOutlet, Navbar],
+  imports: [RouterOutlet, Navbar,Toast],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
 })

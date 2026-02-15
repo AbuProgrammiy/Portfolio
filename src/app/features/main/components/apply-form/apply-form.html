@@ -1,0 +1,48 @@
+<div class="main" [formGroup]="messageForm">
+  <div class="container">
+    <h1 class="header">Get In Touch!</h1>
+    <div class="input-handler">
+      <label>Fullname:</label>
+      <input
+        class="form"
+        placeholder="Abduxoliq G'ijdvoniy"
+        type="text"
+        pInputText
+        formControlName="fullname"
+      />
+    </div>
+    <div class="input-handler">
+      <label>Username:</label>
+      <input
+        class="form"
+        placeholder="tg: @hello_world"
+        type="text"
+        pInputText
+        formControlName="username"
+      />
+    </div>
+    <div class="input-handler">
+      <label>What you want to say?:</label>
+      <textarea
+        class="form"
+        placeholder="Message"
+        rows="5"
+        cols="30"
+        pTextarea
+        formControlName="message"
+      ></textarea>
+    </div>
+    <button class="submit-btn" (click)="submit()">
+      @if (isLoading()) {
+        <p-progress-spinner
+          fill="transparent"
+          animationDuration=".5s"
+          strokeWidth="4"
+          [style]="{ width: '30px', height: '30px' }"
+        />
+      } @else {
+        Send!
+      }
+    </button>
+  </div>
+</div>

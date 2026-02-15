@@ -1,10 +1,11 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { Intro } from './components/intro/intro';
 import { UserCard } from './components/user-card/user-card';
+import { ApplyForm } from "./components/apply-form/apply-form";
 
 @Component({
   selector: 'app-main',
-  imports: [Intro, UserCard],
+  imports: [Intro, UserCard, ApplyForm],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })
