@@ -28,7 +28,7 @@ export class ApplyForm {
   });
 
   protected submit() {
-    this.isLoading.set(true);
+    this.isLoading.set(true); 
 
     const form = this.messageForm.getRawValue();
     const message = `FullName: ${form.fullname}\nUserName: ${form.username}\nMessage: ${form.message}`;
