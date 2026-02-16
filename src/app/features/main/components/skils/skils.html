@@ -1,6 +1,10 @@
 <div class="main">
   <div class="header-handler">
-    <div class="skills-header">Skils</div>
+    @defer (on viewport) {
+      <div class="skills-header">Skils</div>
+    } @placeholder {
+      <div></div>
+    }
   </div>
   <app-angular-framework></app-angular-framework>
   <app-dot-net-framework></app-dot-net-framework>

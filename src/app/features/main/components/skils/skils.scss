@@ -30,5 +30,16 @@
   color: var(--scarlet-red);
   backdrop-filter: blur(20px);
   background-color: rgba($color: white, $alpha: 0.5);
+  animation: scale 2s ease forwards;
   z-index: 1000;
+}
+
+@keyframes scale {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 200px;
+  }
 }
