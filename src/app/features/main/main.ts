@@ -1,16 +1,22 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { Intro } from './components/intro/intro';
-import { UserCard } from './components/user-card/user-card';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { StateService } from '../../core/services/state-service';
 import { ApplyForm } from "./components/apply-form/apply-form";
+import { Intro } from './components/intro/intro';
+import { Overview } from "./components/overview/overview";
+import { Skils } from "./components/skils/skils";
+import { UserCard } from './components/user-card/user-card';
 
 @Component({
   selector: 'app-main',
-  imports: [Intro, UserCard, ApplyForm],
+  imports: [Intro, UserCard, ApplyForm, Skils, Overview],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })
 export class Main implements OnInit {
-  protected showAnimation = signal<boolean>(true);
+  private readonly stateService = inject(StateService);
+  protected showIntro = computed(() => {
+    return this.stateService.showIntro();
+  });
 
   private intervalId?: number;
   private imageUrls = [

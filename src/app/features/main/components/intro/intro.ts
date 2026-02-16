@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, output, signal, ViewChild } from '@angular/core';
+import { Component, computed, ElementRef, inject, signal, ViewChild } from '@angular/core';
 import { StateService } from '../../../../core/services/state-service';
 
 @Component({
@@ -12,11 +12,12 @@ export class Intro {
 
   private readonly stateService = inject(StateService);
 
-  protected stopAnimation = output();
   protected nameClass = signal<string | null>(null);
   protected startTextClass = signal<string | null>(null);
   protected isUserInterackted = signal<boolean>(false);
-  protected show = signal<boolean>(true);
+  protected showInro = computed(() => {
+    return this.stateService.showIntro();
+  });
 
   protected onUserClicked() {
     this.startTextClass.set('fade-out-fast');
@@ -30,9 +31,7 @@ export class Intro {
         this.nameClass.set('scale-increase-and-fade-out');
 
         setTimeout(() => {
-          this.stopAnimation.emit();
-          this.show.set(false)
-          this.stateService.setShowNavbar(true);
+          this.stateService.setShowIntro(false);
         }, 1000);
       }, 1000);
     }, 300);

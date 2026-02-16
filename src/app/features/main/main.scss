@@ -1,25 +1,30 @@
-.main{
+.main {
   width: 100%;
   display: flex;
 }
 
-.user-card{
-  width: 33%;
+.user-card {
+  width: 22%;
   height: 100vh;
   position: sticky;
-  top: 0;
+  top: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   animation: move-right ease forwards;
   animation-duration: 1s;
 }
 
+.content {
+  width: 88%;
+}
+
 @keyframes move-right {
-  0%{
+  0% {
     transform: translateX(-40px);
   }
-  100%{
+
+  100% {
     transform: translateX(0);
   }
 }
