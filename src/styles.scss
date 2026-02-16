@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
-   scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 :root {
   --off-white: #EEEEEE;
   --scarlet-red: #c91634;
+
+  --glass-border: 3px solid rgba($color: gray, $alpha: 0.2);
 }
