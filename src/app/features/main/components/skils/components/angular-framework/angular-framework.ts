@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-angular-framework',
@@ -8,6 +8,13 @@ import { Component, computed } from '@angular/core';
 })
 export class AngularFramework {
 
+  protected skillKeys = signal([
+    "forms",
+    "signal",
+    "rxJS",
+    "primeNG",
+    "primeFlex",
+  ]);
   protected experienceYear = computed(() => {
     const learnStartDate = new Date(2024, 2, 3); // March 3, 2024
     const currentDate = new Date();

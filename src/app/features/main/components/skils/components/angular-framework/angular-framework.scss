@@ -25,6 +25,7 @@
   border: 3px solid rgba($color: gray, $alpha: 0.2);
   border-radius: 10px;
   backdrop-filter: blur(20px);
+  background-color: rgba($color: white, $alpha: 0.3);
   z-index: -1000;
 }
 
@@ -47,6 +48,23 @@
   font-size: 20px;
   font-weight: 100;
   text-align: center;
+  color: gray;
+}
+
+.keys-handler {
+  width: 100%;
+  padding: 0px 125px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.key {
+  width: auto;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid gray;
   color: gray;
 }
 

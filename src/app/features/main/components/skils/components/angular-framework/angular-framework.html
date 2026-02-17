@@ -8,6 +8,11 @@
           Angular is my primary framework. I design enterprise-grade SPAs with advanced state
           management, modular architecture, and performance optimization strategies.
         </p>
+        <div class="keys-handler">
+          @for (key of skillKeys(); track $index) {
+            <div class="key">{{ key }}</div>
+          }
+        </div>
         <div class="experience">
           <div class="experience-detail">
             <h1 class="duration">{{ experienceYear() }}</h1>
