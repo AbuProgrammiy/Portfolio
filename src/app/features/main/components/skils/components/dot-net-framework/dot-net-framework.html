@@ -8,6 +8,11 @@
           I build scalable backend applications using .NET and ASP.NET Core, designing RESTful APIs,
           authentication systems, and database-driven solutions..
         </p>
+        <div class="keys-handler">
+          @for (key of skillKeys(); track $index) {
+            <div class="key">{{ key }}</div>
+          }
+        </div>
         <div class="experience">
           <div class="experience-detail">
             <h1 class="duration">{{ experienceYear() }}</h1>

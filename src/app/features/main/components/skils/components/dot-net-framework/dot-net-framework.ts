@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-dot-net-framework',
@@ -7,6 +7,14 @@ import { Component, computed } from '@angular/core';
   styleUrl: './dot-net-framework.scss',
 })
 export class DotNetFramework {
+  protected skillKeys = signal([
+    "ASP.NET",
+    "EFcore",
+    "PostgrSQL",
+    "Console App",
+    "Mapster",
+    "LINQ",
+  ]);
   protected experienceYear = computed(() => {
     const learnStartDate = new Date(2023, 12, 6); // March 3, 2024
     const currentDate = new Date();
