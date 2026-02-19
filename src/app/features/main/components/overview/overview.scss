@@ -24,3 +24,29 @@
   color: gray;
   text-wrap: wrap;
 }
+
+.btn-handler {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cv-btn {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid var(--scarlet-red);
+  color: var(--scarlet-red);
+  background-color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.cv-btn:hover {
+  color: white;
+  background-color: var(--scarlet-red);
+}

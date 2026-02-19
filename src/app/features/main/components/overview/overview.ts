@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './overview.scss',
 })
 export class Overview {
-
+  protected getCV() {
+    window.open('https://resume.more-info.uz/assets/cv.pdf', 'blank');
+  }
 }
