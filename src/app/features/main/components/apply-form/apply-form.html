@@ -1,51 +1,56 @@
 <div class="main" [formGroup]="messageForm">
-  <div class="container">
-    <div class="header-handler">
-      <h1 class="header primary">Let's Work</h1>
-      <h1 class="header secondary">Together</h1>
-    </div>
-    <div class="input-handler">
-      <label>Fullname:</label>
-      <input
-        class="form"
-        placeholder="Abduxoliq G'ijdvoniy"
-        type="text"
-        pInputText
-        formControlName="fullname"
-      />
-    </div>
-    <div class="input-handler">
-      <label>Username:</label>
-      <input
-        class="form"
-        placeholder="tg: @hello_world"
-        type="text"
-        pInputText
-        formControlName="username"
-      />
-    </div>
-    <div class="input-handler">
-      <label>What you want to say?:</label>
-      <textarea
-        class="form"
-        placeholder="Message"
-        rows="5"
-        cols="30"
-        pTextarea
-        formControlName="message"
-      ></textarea>
-    </div>
-    <button class="submit-btn" (click)="submit()">
-      @if (isLoading()) {
-        <p-progress-spinner
-          fill="transparent"
-          animationDuration=".5s"
-          strokeWidth="4"
-          [style]="{ width: '30px', height: '30px' }"
+  <div class="form-handler">
+    <div class="container">
+      <div class="header-handler">
+        <h1 class="header primary">Let's Work</h1>
+        <h1 class="header secondary">Together</h1>
+      </div>
+      <div class="input-handler">
+        <label>Fullname:</label>
+        <input
+          class="form"
+          placeholder="Abduxoliq G'ijdvoniy"
+          type="text"
+          pInputText
+          formControlName="fullname"
         />
-      } @else {
-        Send!
-      }
-    </button>
+      </div>
+      <div class="input-handler">
+        <label>Username:</label>
+        <input
+          class="form"
+          placeholder="tg: @hello_world"
+          type="text"
+          pInputText
+          formControlName="username"
+        />
+      </div>
+      <div class="input-handler">
+        <label>What you want to say?:</label>
+        <textarea
+          class="form"
+          placeholder="Message"
+          rows="5"
+          cols="30"
+          pTextarea
+          formControlName="message"
+        ></textarea>
+      </div>
+      <button class="submit-btn" (click)="submit()">
+        @if (isLoading()) {
+          <p-progress-spinner
+            fill="transparent"
+            animationDuration=".5s"
+            strokeWidth="4"
+            [style]="{ width: '30px', height: '30px' }"
+          />
+        } @else {
+          Send!
+        }
+      </button>
+    </div>
+  </div>
+  <div class="footer">
+    <i class="pi pi-check"></i>
   </div>
 </div>
