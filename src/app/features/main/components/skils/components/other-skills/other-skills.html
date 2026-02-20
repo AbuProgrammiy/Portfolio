@@ -1,0 +1,20 @@
+<div class="main">
+  <div class="overview">
+    <div class="content">
+      <h3 class="skill-name">Other Skills</h3>
+      <p class="overview-description">
+        I have hands-on experience with various databases, server environments, hosting services,
+        version control systems, and deployment platforms
+        <i class="fa-brands fa-postgresql"></i>
+      </p>
+      <div class="skill-handler">
+        @for (item of skills(); track $index) {
+          <div class="skill-card">
+            <img class="icon" [src]="item.icon" alt="rasmcha" />
+            <p>{{ item.name }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

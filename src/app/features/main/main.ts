@@ -3,12 +3,12 @@ import { StateService } from '../../core/services/state-service';
 import { ApplyForm } from "./components/apply-form/apply-form";
 import { Intro } from './components/intro/intro';
 import { Overview } from "./components/overview/overview";
-import { Skils } from "./components/skils/skils";
+import { Skills } from "./components/skils/skills";
 import { UserCard } from './components/user-card/user-card';
 
 @Component({
   selector: 'app-main',
-  imports: [Intro, UserCard, ApplyForm, Skils, Overview],
+  imports: [Intro, UserCard, ApplyForm, Skills, Overview],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })
