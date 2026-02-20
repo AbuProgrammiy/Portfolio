@@ -51,6 +51,10 @@
     </div>
   </div>
   <div class="footer">
-    <i class="pi pi-check"></i>
+    @for (item of medias(); track $index) {
+      <a [href]="item.link" target="_blank">
+        <i [class]="item.icon" class="icon"></i>
+      </a>
+    }
   </div>
 </div>

@@ -1,11 +1,11 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { MessageService, PrimeIcons } from 'primeng/api';
 import { InputText } from 'primeng/inputtext';
+import { ProgressSpinner } from 'primeng/progressspinner';
 import { Textarea } from 'primeng/textarea';
 import { TelegramService } from '../../../../shared/services/telegram-service';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { MessageService } from 'primeng/api';
-import { ProgressSpinner } from 'primeng/progressspinner';
 
 @Component({
   selector: 'app-apply-form',
@@ -20,6 +20,24 @@ export class ApplyForm {
   private readonly messageService = inject(MessageService);
 
   protected isLoading = signal<boolean>(false);
+  protected medias = signal<Media[]>([
+    {
+      icon: PrimeIcons.TELEGRAM,
+      link: 'https://t.me/abuprogrammiy'
+    },
+    {
+      icon: PrimeIcons.YOUTUBE,
+      link: 'https://www.youtube.com/@abuprogrammiy'
+    },
+    {
+      icon: PrimeIcons.LINKEDIN,
+      link: 'https://www.linkedin.com/in/abu-programmiy-16b65b257'
+    },
+    {
+      icon: PrimeIcons.GITHUB,
+      link: 'https://github.com/abuProgrammiy'
+    },
+  ]);
 
   protected messageForm = this.fb.group({
     fullname: this.fb.control<string | null>(null),
@@ -28,7 +46,7 @@ export class ApplyForm {
   });
 
   protected submit() {
-    this.isLoading.set(true); 
+    this.isLoading.set(true);
 
     const form = this.messageForm.getRawValue();
     const message = `FullName: ${form.fullname}\nUserName: ${form.username}\nMessage: ${form.message}`;
@@ -55,4 +73,9 @@ export class ApplyForm {
         },
       });
   }
+}
+
+export interface Media {
+  icon: string;
+  link: string;
 }

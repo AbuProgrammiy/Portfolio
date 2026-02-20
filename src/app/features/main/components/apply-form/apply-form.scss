@@ -10,7 +10,7 @@
 
 .form-handler {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,11 +74,19 @@ label {
 
 .footer {
   width: 100%;
+  height: 10vh;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
 }
 
 .pi {
   font-family: 'PrimeIcons' !important;
+}
+
+.icon {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
 }
