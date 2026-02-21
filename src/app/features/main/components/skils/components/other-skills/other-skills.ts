@@ -32,6 +32,10 @@ export class OtherSkills {
       name: "Windows Server",
       icon: 'assets/icons/windows.ico'
     },
+    {
+      name: "Vercel",
+      icon: 'assets/icons/vercel.ico'
+    },
   ]);
 }
 
