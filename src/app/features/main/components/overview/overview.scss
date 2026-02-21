@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: scale-up ease forwards;
+  animation-duration: 1s;
 }
 
 .main-header {
@@ -43,10 +45,19 @@
   background-color: white;
   font-size: 15px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .cv-btn:hover {
   color: white;
   background-color: var(--scarlet-red);
+}
+
+@keyframes scale-up {
+  0% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1;
+  }
 }
