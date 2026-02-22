@@ -9,3 +9,35 @@
   top: 0;
   z-index: 1000;
 }
+
+.main {
+  width: 100%;
+  display: flex;
+}
+
+.user-card {
+  width: 25%;
+  height: 85vh;
+  padding: 0 20px;
+  position: sticky;
+  top: 90px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  animation: move-right ease forwards;
+  animation-duration: 1s;
+}
+
+.content {
+  width: 75%;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-40px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,38 +1,11 @@
 .main {
   width: 100%;
-  display: flex;
-}
-
-.user-card {
-  width: 22%;
-  height: 100vh;
-  position: sticky;
-  top: 25px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  animation: move-right ease forwards;
-  animation-duration: 1s;
-}
-
-.content {
-  width: 88%;
 }
 
 .overivew-handler {
   width: 100%;
   animation: scale-up ease forwards;
   animation-duration: 1s;
-}
-
-@keyframes move-right {
-  0% {
-    transform: translateX(-40px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }
 
 @keyframes scale-up {

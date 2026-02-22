@@ -12,6 +12,10 @@ import { Menu } from 'primeng/menu';
 export class Navbar {
   protected items = signal<NavbarItems[]>([
     {
+      name: 'home',
+      path: '',
+    },
+    {
       name: 'about',
       path: '',
     },
@@ -24,6 +28,8 @@ export class Navbar {
       path: 'projects',
     },
   ]);
+
+  protected selectedItem = signal<string>('home');
 
   protected menuItems: MenuItem[] = [
     {
