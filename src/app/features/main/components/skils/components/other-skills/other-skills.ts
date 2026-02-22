@@ -1,46 +1,44 @@
 import { Component, signal } from '@angular/core';
+import {
+  SkillCard,
+  SkillCardModel,
+} from '../../../../../../shared/components/skill-card/skill-card';
 
 @Component({
   selector: 'app-other-skills',
-  imports: [],
+  imports: [SkillCard],
   templateUrl: './other-skills.html',
   styleUrl: './other-skills.scss',
 })
 export class OtherSkills {
-  protected skills = signal<Skill[]>([
+  protected skills = signal<SkillCardModel[]>([
     {
-      name: "PostgreSQL",
-      icon: 'assets/icons/postgresql.ico'
+      name: 'PostgreSQL',
+      icon: 'assets/icons/postgresql.ico',
     },
     {
-      name: "PrimeNG",
-      icon: 'assets/icons/primeng.png'
+      name: 'PrimeNG',
+      icon: 'assets/icons/primeng.png',
     },
     {
-      name: "GitHub",
-      icon: 'assets/icons/github.ico'
+      name: 'GitHub',
+      icon: 'assets/icons/github.ico',
     },
     {
-      name: "GitHub",
-      icon: 'assets/icons/gitlab.ico'
+      name: 'GitHub',
+      icon: 'assets/icons/gitlab.ico',
     },
     {
-      name: "BitBucket",
-      icon: 'assets/icons/bitbucket.ico'
+      name: 'BitBucket',
+      icon: 'assets/icons/bitbucket.ico',
     },
     {
-      name: "Windows Server",
-      icon: 'assets/icons/windows.ico'
+      name: 'Windows Server',
+      icon: 'assets/icons/windows.ico',
     },
     {
-      name: "Vercel",
-      icon: 'assets/icons/vercel.ico'
+      name: 'Vercel',
+      icon: 'assets/icons/vercel.ico',
     },
   ]);
-}
-
-export interface Skill {
-  name: string,
-  icon: string;
-  isIconImage?: boolean;
 }

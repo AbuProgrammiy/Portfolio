@@ -1,0 +1,13 @@
+.main {
+  width: fit-content;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba($color: gray, $alpha: 0.2);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}

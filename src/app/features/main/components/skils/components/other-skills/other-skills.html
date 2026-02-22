@@ -9,10 +9,7 @@
       </p>
       <div class="skill-handler">
         @for (item of skills(); track $index) {
-          <div class="skill-card">
-            <img class="icon" [src]="item.icon" alt="rasmcha" />
-            <p>{{ item.name }}</p>
-          </div>
+          <app-skill-card [item]="item"></app-skill-card>
         }
       </div>
     </div>

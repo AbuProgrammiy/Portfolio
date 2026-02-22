@@ -33,7 +33,7 @@ export class Navbar implements OnInit {
 
   protected menuItems: MenuItem[] = [
     {
-      label: 'Options',
+      label: 'Medias',
       items: [
         {
           label: 'Telegram',

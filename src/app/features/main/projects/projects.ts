@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { Skill } from '../components/skils/components/other-skills/other-skills';
 import { ProjectCard } from './components/project-card/project-card';
+import { SkillCardModel } from '../../../shared/components/skill-card/skill-card';
 
 @Component({
   selector: 'app-projects',
@@ -40,5 +40,5 @@ export interface ProjectModel {
   name?: string;
   description?: string;
   pictureUrl?: string;
-  usedSkills?: Skill[];
+  usedSkills?: SkillCardModel[];
 }

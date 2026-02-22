@@ -3,8 +3,12 @@
     <img class="img" [src]="item()?.pictureUrl" alt="rasmcha" />
     <div class="item-info">
       <h1 class="name">{{ item()?.name }}</h1>
-      <p>{{ item()?.description }}</p>
-
+      <p class="description">{{ item()?.description }}</p>
+      <div class="used-skills">
+        @for (item of item()?.usedSkills; track $index) {
+          <app-skill-card [item]="item"></app-skill-card>
+        }
+      </div>
     </div>
   </div>
 </div>
