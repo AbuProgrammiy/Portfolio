@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { Menu } from 'primeng/menu';
@@ -9,7 +9,7 @@ import { Menu } from 'primeng/menu';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {
+export class Navbar implements OnInit {
   protected items = signal<NavbarItems[]>([
     {
       name: 'home',
@@ -29,7 +29,7 @@ export class Navbar {
     },
   ]);
 
-  protected selectedItem = signal<string>('home');
+  protected selectedItem = signal<string | null>(null);
 
   protected menuItems: MenuItem[] = [
     {
@@ -66,6 +66,18 @@ export class Navbar {
       ],
     },
   ];
+
+  ngOnInit(): void {
+    const path = window.location.pathname;
+
+    if (path == '/') {
+      this.selectedItem.set('home');
+    } else if (path.includes('projects')) {
+      this.selectedItem.set('projects');
+    } else {
+      this.selectedItem.set(null);
+    }
+  }
 }
 
 export interface NavbarItems {
