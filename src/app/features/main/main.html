@@ -6,8 +6,15 @@
       <app-user-card [userPictureUrl]="userPictureUrl()" [fade]="fade()"></app-user-card>
     </div>
     <div class="content">
-      <app-overview></app-overview>
-      <app-skils></app-skils>
+      <div class=""></div>
+      <div class="overivew-handler">
+        <app-overview></app-overview>
+      </div>
+      @defer (on viewport) {
+        <app-skils></app-skils>
+      } @placeholder {
+        <div></div>
+      }
     </div>
   </div>
   <app-apply-form></app-apply-form>

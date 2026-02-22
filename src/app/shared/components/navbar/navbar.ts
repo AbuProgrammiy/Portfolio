@@ -21,7 +21,7 @@ export class Navbar {
     },
     {
       name: 'projects',
-      path: '',
+      path: 'projects',
     },
   ]);
 

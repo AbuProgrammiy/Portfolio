@@ -1,0 +1,9 @@
+<div class="main">
+  <div class="projects-handler">
+    <div class="project-card">
+      @for (item of projects(); track $index) {
+        <app-project-card [item]="item"></app-project-card>
+      }
+    </div>
+  </div>
+</div>

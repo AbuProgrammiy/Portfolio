@@ -3,7 +3,9 @@
     <h1 class="name" (click)="menu.toggle($event)">@abuprogrammiy</h1>
     <div class="items">
       @for (item of items(); track $index) {
-        <a class="list-imte" [routerLink]="item.path">{{ item.name }}</a>
+        <strong>
+          <a class="list-imte" [routerLink]="item.path">{{ item.name }}</a>
+        </strong>
       }
     </div>
     <h1 class="name">portfolio</h1>

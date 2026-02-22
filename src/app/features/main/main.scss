@@ -19,6 +19,12 @@
   width: 88%;
 }
 
+.overivew-handler {
+  width: 100%;
+  animation: scale-up ease forwards;
+  animation-duration: 1s;
+}
+
 @keyframes move-right {
   0% {
     transform: translateX(-40px);
@@ -26,5 +32,14 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1;
   }
 }
