@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
+import { Router } from '@angular/router';
 import { SkillCard } from "../../../../shared/components/skill-card/skill-card";
 import { ProjectModel } from '../../projects';
 
@@ -9,6 +10,15 @@ import { ProjectModel } from '../../projects';
   styleUrl: './project-card.scss',
 })
 export class ProjectCard {
+  private readonly router = inject(Router);
   public item = input<ProjectModel>();
   public styleClass = input<string>();
+
+  protected navigate() {
+    const path = this.item()?.path;
+
+    if (!path) return;
+
+    this.router.navigate(['projects/preview', path]);
+  }
 }

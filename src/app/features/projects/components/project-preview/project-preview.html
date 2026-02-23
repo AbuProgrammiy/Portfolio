@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="navbar">
+    <app-back-arrow [route]="'projects'"></app-back-arrow>
+    <div class="name">{{ name() }}</div>
+    <div></div>
+  </div>
+  <div class="content">
+    <p-galleria [value]="images()" [containerStyle]="{ 'max-width': '100%' }" [numVisible]="5">
+      <ng-template #item let-item>
+        <img class="image" [src]="item.imageUrl" style="width: 100%" />
+      </ng-template>
+      <ng-template #thumbnail let-item>
+        <img class="thumb-nail" [src]="item.thumbNailUrl" />
+      </ng-template>
+    </p-galleria>
+    <!-- <h3 class="project-name">{{ project()?.name }}</h3> -->
+    <div class="description" [innerHTML]="project()?.extendedDescription"></div>
+  </div>
+</div>

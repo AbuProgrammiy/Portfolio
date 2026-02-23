@@ -1,6 +1,6 @@
-<div class="main" [class]="styleClass()">
+<div class="main" [class]="styleClass()" (click)="navigate()">
   <div class="content">
-    <img class="img" [src]="item()?.pictureUrl" alt="rasmcha" />
+    <img class="img" [src]="item()?.galleria?.[0]?.imageUrl" alt="rasmcha" />
     <div class="item-info">
       <h1 class="name">{{ item()?.name }}</h1>
       <p class="description">{{ item()?.description }}</p>

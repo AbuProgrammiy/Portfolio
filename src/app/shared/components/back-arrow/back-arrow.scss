@@ -1,0 +1,17 @@
+.main {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid rgba($color: gray, $alpha: 0.3);
+  backdrop-filter: blur(20px);
+  background-color: rgba($color: white, $alpha: 0.5);
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  color: rgba($color: gray, $alpha: 1.0);
+}
