@@ -4,8 +4,20 @@
 
 .projects-handler{
   width: 100%;
+  min-height: 89vh;
+  padding: 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.card-handler{
+  width: 100%;
+  height: 80vh;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
