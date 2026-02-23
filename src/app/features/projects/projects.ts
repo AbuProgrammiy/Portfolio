@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
+import { SkillCardModel } from '../../shared/components/skill-card/skill-card';
 import { ProjectCard } from './components/project-card/project-card';
-import { SkillCardModel } from '../../../shared/components/skill-card/skill-card';
 
 @Component({
   selector: 'app-projects',
