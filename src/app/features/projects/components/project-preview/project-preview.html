@@ -21,5 +21,9 @@
         <app-skill-card [item]="item"></app-skill-card>
       }
     </div>
+    <h3 class="link-header">Links:</h3>
+    @for (item of project()?.links; track $index) {
+      <a class="link" [href]="item" target="_blank">{{ item }}</a>
+    }
   </div>
 </div>

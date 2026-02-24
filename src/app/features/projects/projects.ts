@@ -24,4 +24,5 @@ export interface ProjectModel {
   extendedDescription?: string;
   galleria?: GalleriaModel[];
   usedSkills?: SkillCardModel[];
+  links?: string[];
 }

@@ -9,6 +9,7 @@ export class DataService {
     {
       path: 'namoz-vaqtlari-api',
       name: 'Namoz Vaqtlari API',
+      links: ['https://namoz-vaqtlari-api.more-info.uz/'],
       description: 'Provides data about pray times. Data includes all regions of Uzbekistan.',
       extendedDescription: `
   <p><strong>Namoz Vaqtlari API</strong> provides accurate daily Islamic prayer times for all regions of Uzbekistan.</p>
@@ -79,6 +80,7 @@ export class DataService {
     {
       path: 'prayr-reminder-bot',
       name: 'PrayReminderBot',
+      links: ['https://t.me/prayreminder_bot/'],
       description:
         'A telegram bot which reminds pray times. Reminds pray times 5 times a day. Additionally it sends useful quotes also.',
       extendedDescription: `<p><strong>PrayReminderBot</strong> is a Telegram bot that sends daily Islamic prayer time reminders five times a day for all regions of Uzbekistan.</p>
@@ -164,6 +166,7 @@ export class DataService {
     {
       path: 'tarvooz',
       name: 'Tarvooz',
+      links: ['https://tarvooz.more-info.uz/'],
       description: "A Pet project about online shop. it\'s made for competition in Najot Ta'lim. And won 1-place",
       extendedDescription: `<p><strong>Tarvooz</strong> is an online shop web application developed as a pet project for a competition at Najot Ta'lim, where it achieved 1st place.</p>
 
