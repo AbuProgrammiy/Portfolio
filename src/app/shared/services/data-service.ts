@@ -81,11 +81,62 @@ export class DataService {
       name: 'PrayReminderBot',
       description:
         'A telegram bot which reminds pray times. Reminds pray times 5 times a day. Additionally it sends useful quotes also.',
+      extendedDescription: `<p><strong>PrayReminderBot</strong> is a Telegram bot that sends daily Islamic prayer time reminders five times a day for all regions of Uzbekistan.</p>
+
+          <p>The bot is designed to help users stay consistent with their prayers by delivering accurate prayer times along with meaningful quotes to increase engagement and spiritual motivation.</p>
+
+          <h4>Features</h4>
+          <ul>
+            <li>Five daily prayer time reminders</li>
+            <li>Support for all regions of Uzbekistan</li>
+            <li>Motivational quotes attached to reminders</li>
+            <li>Telegram Mini App for adding and managing quotes</li>
+            <li>Active user tracking and statistics</li>
+          </ul>
+
+          <h4>Statistics</h4>
+          <ul>
+            <li>Approximately 400 total users</li>
+            <li>200 active users</li>
+            <li>200 users who have blocked the bot</li>
+          </ul>
+
+          <h4>Use Cases</h4>
+          <ul>
+            <li>Daily personal prayer reminders</li>
+            <li>Spiritual habit building</li>
+            <li>Community engagement through quotes</li>
+            <li>Islamic lifestyle support tools</li>
+          </ul>`,
       galleria: [
         {
-          imageUrl: 'assets/projects/pray-reminder-bot.jpg',
-          thumbNailUrl: 'assets/projects/pray-reminder-bot.jpg'
-        }
+          imageUrl: 'assets/projects/pray-reminder.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/pray-reminder-2.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder-2.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/pray-reminder-3.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder-3.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/pray-reminder-4.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder-4.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/pray-reminder-5.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder-5.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/pray-reminder-6.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder-6.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/pray-reminder-7.jpg',
+          thumbNailUrl: 'assets/projects/pray-reminder-7.jpg'
+        },
       ],
       usedSkills: [
         {
@@ -114,11 +165,58 @@ export class DataService {
       path: 'tarvooz',
       name: 'Tarvooz',
       description: "A Pet project about online shop. it\'s made for competition in Najot Ta'lim. And won 1-place",
+      extendedDescription: `<p><strong>Tarvooz</strong> is an online shop web application developed as a pet project for a competition at Najot Ta'lim, where it achieved 1st place.</p>
+
+<p>The project focuses on delivering a modern e-commerce experience with a clean, interactive, and soft UI design. It includes essential shopping functionality along with secure authentication features.</p>
+
+<h4>Features</h4>
+<ul>
+  <li>Product listing page</li>
+  <li>Product detailed view page</li>
+  <li>User authentication (Sign In / Sign Up)</li>
+  <li>Forgot password functionality with email support</li>
+  <li>Search by product name and category</li>
+  <li>Basket (cart) management logic</li>
+  <li>Responsive and interactive user interface</li>
+</ul>
+
+<h4>Achievement</h4>
+<ul>
+  <li>1st place winner at Najot Ta'lim competition</li>
+</ul>
+
+<h4>Use Cases</h4>
+<ul>
+  <li>E-commerce learning platform</li>
+  <li>Authentication system demonstration</li>
+  <li>Search and filtering implementation example</li>
+  <li>UI/UX design showcase</li>
+</ul>`,
       galleria: [
         {
           imageUrl: 'assets/projects/tarvooz.jpg',
           thumbNailUrl: 'assets/projects/tarvooz.jpg'
-        }
+        },
+        {
+          imageUrl: 'assets/projects/tarvooz-2.jpg',
+          thumbNailUrl: 'assets/projects/tarvooz-2.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/tarvooz-3.jpg',
+          thumbNailUrl: 'assets/projects/tarvooz-3.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/tarvooz-4.jpg',
+          thumbNailUrl: 'assets/projects/tarvooz-4.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/tarvooz-5.jpg',
+          thumbNailUrl: 'assets/projects/tarvooz-5.jpg'
+        },
+        {
+          imageUrl: 'assets/projects/tarvooz-6.jpg',
+          thumbNailUrl: 'assets/projects/tarvooz-6.jpg'
+        },
       ],
       usedSkills: [
         {

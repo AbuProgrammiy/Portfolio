@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { GalleriaModule } from 'primeng/galleria';
 import { BackArrow } from "../../../../shared/components/back-arrow/back-arrow";
+import { SkillCard } from "../../../../shared/components/skill-card/skill-card";
 import { DataService } from '../../../../shared/services/data-service';
 import { ProjectModel } from '../../projects';
 
 @Component({
   selector: 'app-project-preview',
-  imports: [BackArrow, GalleriaModule, FormsModule],
+  imports: [BackArrow, GalleriaModule, FormsModule, SkillCard],
   templateUrl: './project-preview.html',
   styleUrl: './project-preview.scss',
 })

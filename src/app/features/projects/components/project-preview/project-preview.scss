@@ -55,3 +55,16 @@
   line-height: 30px;
   color: gray;
 }
+
+.skills-header {
+  color: gray;
+  margin: 20px 0px;
+}
+
+.used-skills {
+  width: 50%;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

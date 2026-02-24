@@ -15,5 +15,11 @@
     </p-galleria>
     <!-- <h3 class="project-name">{{ project()?.name }}</h3> -->
     <div class="description" [innerHTML]="project()?.extendedDescription"></div>
+    <h3 class="skills-header">Used Skills:</h3>
+    <div class="used-skills">
+      @for (item of project()?.usedSkills; track $index) {
+        <app-skill-card [item]="item"></app-skill-card>
+      }
+    </div>
   </div>
 </div>
