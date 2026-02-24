@@ -2,7 +2,7 @@
   <div class="projects-handler">
     @for (item of projects(); track $index) {
       <div class="card-handler">
-        <app-project-card [item]="item"></app-project-card>
+        <app-project-card [style.margin-top.px]="$index * 150" [item]="item"></app-project-card>
       </div>
     }
   </div>
