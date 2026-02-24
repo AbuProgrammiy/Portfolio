@@ -7,12 +7,3 @@
   animation: scale-up ease forwards;
   animation-duration: 1s;
 }
-
-@keyframes scale-up {
-  0% {
-    scale: 0.9;
-  }
-  100% {
-    scale: 1;
-  }
-}

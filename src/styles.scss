@@ -12,3 +12,13 @@
 
   --glass-border: 3px solid rgba($color: gray, $alpha: 0.2);
 }
+
+@keyframes scale-up {
+  0% {
+    scale: 0.9;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
