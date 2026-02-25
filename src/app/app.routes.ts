@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Main } from './features/main/main';
 import { ProjectPreview } from './features/projects/components/project-preview/project-preview';
 import { Projects } from './features/projects/projects';
+import { Works } from './features/works/works';
 import { MainLayout } from './layout/main-layout/main-layout';
 
 export const routes: Routes = [
@@ -20,6 +21,10 @@ export const routes: Routes = [
       {
         path: "projects/preview/:name",
         component: ProjectPreview
+      },
+      {
+        path: "works",
+        component: Works
       }
     ]
   }

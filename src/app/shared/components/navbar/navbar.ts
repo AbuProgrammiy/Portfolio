@@ -21,7 +21,7 @@ export class Navbar implements OnInit {
     },
     {
       name: 'works',
-      path: '',
+      path: 'works',
     },
     {
       name: 'projects',
