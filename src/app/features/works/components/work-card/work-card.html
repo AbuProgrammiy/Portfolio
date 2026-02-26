@@ -1,0 +1,14 @@
+<div class="mian">
+  <div class="container">
+    @for (url of item()?.imageUrls; track $index) {
+      <div
+        class="bg-picture"
+        [style.background-image]="'url(' + url + ')'"
+        [style.z-index]="imageIndexes()[$index]"
+      ></div>
+    }
+  </div>
+  <div class="overview-container">
+    <div class="overview-panel"></div>
+  </div>
+</div>

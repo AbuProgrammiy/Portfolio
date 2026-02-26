@@ -1,10 +1,23 @@
 import { Injectable, signal } from '@angular/core';
 import { ProjectModel } from '../../features/projects/projects';
+import { WorkModel } from '../models/work.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
+  public works = signal<WorkModel[]>([
+    {
+      duration: {
+        start: new Date(2025, 3, 15),
+        end: 'Now'
+      },
+      imageUrls: [
+        'assets/works/devhub.jpg',
+        'assets/works/devhub-2.jpg',
+      ]
+    }
+  ]);
   public projects = signal<ProjectModel[]>([
     {
       path: 'namoz-vaqtlari-api',

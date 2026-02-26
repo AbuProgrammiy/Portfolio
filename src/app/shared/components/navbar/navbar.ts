@@ -16,8 +16,8 @@ export class Navbar implements OnInit {
       path: '',
     },
     {
-      name: 'about',
-      path: '',
+      name: 'blog',
+      path: 'blog',
     },
     {
       name: 'works',

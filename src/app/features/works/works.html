@@ -1,1 +1,5 @@
-<p>works works!</p>
+<div class="main">
+  @for (item of works(); track $index) {
+    <app-work-card [item]="item"></app-work-card>
+  }
+</div>
