@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, computed, DestroyRef, inject, input, linkedSignal, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { interval } from 'rxjs';
@@ -5,7 +6,9 @@ import { WorkModel } from '../../../../shared/models/work.model';
 
 @Component({
   selector: 'app-work-card',
-  imports: [],
+  imports: [
+    DatePipe
+  ],
   templateUrl: './work-card.html',
   styleUrl: './work-card.scss',
 })
@@ -38,7 +41,7 @@ export class WorkCard implements OnInit {
   }
 
   private setImageChanger() {
-    interval(10000)
+    interval(7000)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => {
         this.fadeOutIndex.update(indexses => {

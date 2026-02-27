@@ -10,6 +10,16 @@
     }
   </div>
   <div class="overview-container">
-    <div class="overview-panel"></div>
+    <div class="overview-panel">
+      <h1 class="header">{{ item()?.name }}</h1>
+      <div class="description" [innerHTML]="item()?.extendedDescription"></div>
+      <div class="duration">
+        <p class="duration-header">Duration</p>
+        <div class="duration-content">
+          <h1>{{ item()?.duration?.start | date: 'MM/yyyy' }}</h1>
+          <h1>{{ item()?.duration?.end }}</h1>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

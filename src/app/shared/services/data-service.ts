@@ -8,6 +8,7 @@ import { WorkModel } from '../models/work.model';
 export class DataService {
   public works = signal<WorkModel[]>([
     {
+      name: "BePro DevHub",
       duration: {
         start: new Date(2025, 3, 15),
         end: 'Now'
@@ -15,7 +16,18 @@ export class DataService {
       imageUrls: [
         'assets/works/devhub.jpg',
         'assets/works/devhub-2.jpg',
-      ]
+      ],
+      extendedDescription: `<p><strong>BePro DevHub</strong> is the company where I started my professional career as a Frontend Developer.</p>
+
+<p>I work in a supportive and motivated team environment and contribute to the company’s largest project — <strong>UDS (Unified Dispatch System)</strong>.</p>
+
+<h4>My Role</h4>
+<ul>
+  <li>Frontend Developer (Angular)</li>
+  <li>Developing scalable and maintainable UI components</li>
+  <li>Building responsive and structured interfaces</li>
+  <li>Collaborating with backend developers and analysts</li>
+</ul>`
     }
   ]);
   public projects = signal<ProjectModel[]>([
