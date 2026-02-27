@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, computed, DestroyRef, inject, input, linkedSignal, OnInit } from '@angular/core';
+import { Component, computed, DestroyRef, inject, input, linkedSignal, OnInit, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { interval } from 'rxjs';
 import { WorkModel } from '../../../../shared/models/work.model';
@@ -14,49 +14,56 @@ import { WorkModel } from '../../../../shared/models/work.model';
 })
 export class WorkCard implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
+
   public item = input<WorkModel>();
+
+  // length of images
   private imagesLength = computed(() => {
     return this.item()?.imageUrls?.length ?? 0;
   });
+
+  // z-index order (0-based)
   protected imageIndexes = linkedSignal<number[]>(() => {
-    const indexses: number[] = [];
-
-    for (let i = 1; i <= this.imagesLength(); i++) {
-      indexses.push(i);
-    }
-    return indexses;
+    return Array.from(
+      { length: this.imagesLength() },
+      (_, i) => i
+    );
   });
 
-  protected fadeOutIndex = linkedSignal<number[]>(() => {
-    const indexses: number[] = [];
-
-    for (let i = 1; i <= this.imagesLength(); i++) {
-      indexses.push(i);
-    }
-    return indexses;
-  });
+  // which image is currently fading
+  protected fadingIndex = signal<number | null>(null);
 
   ngOnInit() {
     this.setImageChanger();
   }
 
   private setImageChanger() {
-    interval(7000)
+    interval(5000)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => {
-        this.fadeOutIndex.update(indexses => {
-          return [...indexses.slice(1), indexses[0]];
-        });
 
+        const length = this.imagesLength();
+        if (!length) return;
+
+        const topZIndex = length - 1;
+
+        // find which image is currently on top
+        const currentIndexes = this.imageIndexes();
+        const topImageIndex = currentIndexes.findIndex(
+          z => z === topZIndex
+        );
+
+        // trigger fade
+        this.fadingIndex.set(topImageIndex);
+
+        // after animation duration (1s)
         setTimeout(() => {
-          this.imageIndexes.update(indexses => {
-            return [...indexses.slice(1), indexses[0]];
-          });
+          this.imageIndexes.update(indexes =>
+            [...indexes.slice(1), indexes[0]]
+          );
+
+          this.fadingIndex.set(null);
         }, 1000);
       });
-  }
-
-  protected fadeOut(index: number): boolean {
-    return this.fadeOutIndex()?.[index] == this.fadeOutIndex().length - 1;
   }
 }

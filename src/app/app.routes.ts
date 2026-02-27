@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { Blogs } from './features/blogs/blogs';
 import { Main } from './features/main/main';
 import { ProjectPreview } from './features/projects/components/project-preview/project-preview';
 import { Projects } from './features/projects/projects';
@@ -21,6 +22,10 @@ export const routes: Routes = [
       {
         path: "projects/preview/:name",
         component: ProjectPreview
+      },
+      {
+        path: "blogs",
+        component: Blogs
       },
       {
         path: "works",

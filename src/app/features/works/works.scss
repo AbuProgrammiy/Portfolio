@@ -1,3 +1,9 @@
-.main{
+.container {
+  width: 100%;
+  animation: scale-up ease forwards;
+  animation-duration: 1s;
+}
+
+.main {
   width: 100%;
 }
