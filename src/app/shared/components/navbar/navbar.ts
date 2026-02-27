@@ -74,6 +74,10 @@ export class Navbar implements OnInit {
       this.selectedItem.set('home');
     } else if (path.includes('projects')) {
       this.selectedItem.set('projects');
+    } else if (path.includes('works')) {
+      this.selectedItem.set('works');
+    } else if (path.includes('blogs')) {
+      this.selectedItem.set('blogs');
     } else {
       this.selectedItem.set(null);
     }
