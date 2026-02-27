@@ -1,0 +1,36 @@
+* {
+  font-family: sans-serif;
+}
+
+.main {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid rgba($color: gray, $alpha: 0.2);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  font-size: 20px;
+  color: gray;
+}
+
+.description {
+  font-size: 15px;
+  color: gray;
+}

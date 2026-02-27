@@ -1,11 +1,38 @@
 import { Injectable, signal } from '@angular/core';
 import { ProjectModel } from '../../features/projects/projects';
+import { BlogModel } from '../models/blog.model';
 import { WorkModel } from '../models/work.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
+  public blogs = signal<BlogModel[]>([
+    {
+      name: 'GDG 2024 Blog',
+      description: 'I conducted interviews with well-known participants and speakers at Google Developer Groups (GDG) 2024 in Tashkent.',
+      link: 'https://www.youtube.com/watch?v=Xrq2GTuE8dk',
+      imageUrl: 'assets/blogs/blog.jpg'
+    },
+    {
+      name: 'Microsoft Conference 2024',
+      description: 'I created a vlog covering the atmosphere and key moments of Microsoft Developer Conference Uzbekistan (MDCU) in Tashkent.',
+      link: 'https://www.youtube.com/watch?v=z2g_tuc3Ap4&t',
+      imageUrl: 'assets/blogs/blog-2.jpg'
+    },
+    {
+      name: 'HTTP Error 500.9 resolve',
+      description: 'My most watched video',
+      link: 'https://www.youtube.com/watch?v=BudTXXJtEcU',
+      imageUrl: 'assets/blogs/blog-4.jpg'
+    },
+    {
+      name: 'Bike Tour)',
+      description: 'I love riding bike accross city',
+      link: 'https://www.youtube.com/watch?v=YhR3q847Spk',
+      imageUrl: 'assets/blogs/blog-3.jpg'
+    },
+  ]);
   public works = signal<WorkModel[]>([
     {
       name: "BePro DevHub",

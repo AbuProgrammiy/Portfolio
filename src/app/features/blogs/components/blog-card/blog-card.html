@@ -1,0 +1,7 @@
+<div class="main">
+  <img class="image" [src]="item()?.imageUrl" alt="" (click)="navigate()" />
+  <div class="info">
+    <h1 class="header">{{ item()?.name }}</h1>
+    <p class="description">{{ item()?.description }}</p>
+  </div>
+</div>

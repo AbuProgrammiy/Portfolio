@@ -1,1 +1,10 @@
-<p>blogs works!</p>
+<div class="main">
+  <div class="header-container">
+    <div class="header">Blogs</div>
+  </div>
+  <div class="posts">
+    @for (item of blogs(); track $index) {
+      <app-blog-card [item]="item"></app-blog-card>
+    }
+  </div>
+</div>
