@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject, input, linkedSignal, OnInit, signal } from '@angular/core';
+import { Component, computed, DestroyRef, inject, input, linkedSignal, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { interval } from 'rxjs';
 import { WorkModel } from '../../../../shared/models/work.model';
@@ -12,21 +12,48 @@ import { WorkModel } from '../../../../shared/models/work.model';
 export class WorkCard implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
   public item = input<WorkModel>();
-  protected baseIndexes = linkedSignal<number[]>(() => {
-    const length = this.item()?.imageUrls?.length ?? 0;
-    return Array.from({ length }, (_, i) => i);
+  private imagesLength = computed(() => {
+    return this.item()?.imageUrls?.length ?? 0;
   });
-  protected rotationOffset = signal(0);
+  protected imageIndexes = linkedSignal<number[]>(() => {
+    const indexses: number[] = [];
+
+    for (let i = 1; i <= this.imagesLength(); i++) {
+      indexses.push(i);
+    }
+    return indexses;
+  });
+
+  protected fadeOutIndex = linkedSignal<number[]>(() => {
+    const indexses: number[] = [];
+
+    for (let i = 1; i <= this.imagesLength(); i++) {
+      indexses.push(i);
+    }
+    return indexses;
+  });
 
   ngOnInit() {
     this.setImageChanger();
   }
 
   private setImageChanger() {
-    interval(1000)
+    interval(10000)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => {
-        this.rotationOffset.update(v => v + 1);
+        this.fadeOutIndex.update(indexses => {
+          return [...indexses.slice(1), indexses[0]];
+        });
+
+        setTimeout(() => {
+          this.imageIndexes.update(indexses => {
+            return [...indexses.slice(1), indexses[0]];
+          });
+        }, 1000);
       });
+  }
+
+  protected fadeOut(index: number): boolean {
+    return this.fadeOutIndex()?.[index] == this.fadeOutIndex().length - 1;
   }
 }

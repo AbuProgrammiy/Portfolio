@@ -4,6 +4,7 @@
       <div
         class="bg-picture"
         [style.background-image]="'url(' + url + ')'"
+        [class.fade-out]="fadeOut($index)"
         [style.z-index]="imageIndexes()[$index]"
       ></div>
     }
