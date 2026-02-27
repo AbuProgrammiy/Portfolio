@@ -14,8 +14,11 @@ export class DataService {
         end: 'Now'
       },
       imageUrls: [
-        'assets/works/devhub.jpg',
         'assets/works/devhub-2.jpg',
+        'assets/works/devhub-4.jpg',
+        'assets/works/devhub-3.jpg',
+        'assets/works/devhub.jpg',
+        'assets/works/devhub-5.jpg',
       ],
       extendedDescription: `<p><strong>BePro DevHub</strong> is the company where I started my professional career as a Frontend Developer.</p>
 
